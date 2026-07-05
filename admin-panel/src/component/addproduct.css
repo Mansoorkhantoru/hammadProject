@@ -1,0 +1,291 @@
+/* Add Product Page Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.addproduct {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 20px 40px 20px;
+  position: relative;
+}
+
+/* Link button container */
+.link-btn {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+/* Form Container */
+.addproduct form {
+  background: white;
+  max-width: 600px;
+  width: 100%;
+  padding: 40px;
+  border-radius: 30px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  animation: slideUp 0.5s ease;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Form Heading */
+.addproduct form h3 {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 30px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 2px;
+}
+
+/* Form Inputs */
+.addproduct form input {
+  width: 100%;
+  padding: 14px 18px;
+  margin-bottom: 20px;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  outline: none;
+  font-family: inherit;
+}
+
+.addproduct form input:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+/* File Input Styling */
+.addproduct form input[type="file"] {
+  padding: 10px;
+  border: 2px dashed #667eea;
+  background: #f8f9ff;
+  cursor: pointer;
+}
+
+.addproduct form input[type="file"]:hover {
+  background: #f0f2ff;
+}
+
+.addproduct form input[type="file"]::-webkit-file-upload-button {
+  padding: 8px 16px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-right: 15px;
+  transition: all 0.3s ease;
+}
+
+.addproduct form input[type="file"]::-webkit-file-upload-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+}
+
+/* Textarea (description) */
+.addproduct form input[type="text"]:last-of-type {
+  height: 80px;
+  resize: vertical;
+  font-family: inherit;
+}
+
+/* Prescription Section */
+.addproduct form h4 {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 10px;
+  font-weight: 600;
+  display: inline-block;
+  margin-right: 15px;
+}
+
+/* Checkbox Styling */
+.addproduct form input[type="checkbox"] {
+  width: auto;
+  width: 22px;
+  height: 22px;
+  margin: 0 0 -5px 0;
+  cursor: pointer;
+  accent-color: #667eea;
+}
+
+/* Submit Button */
+.addproduct form button {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.addproduct form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+}
+
+.addproduct form button:active {
+  transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .addproduct {
+    padding: 70px 15px 30px 15px;
+    align-items: flex-start;
+  }
+  
+  .addproduct form {
+    padding: 30px 25px;
+    margin-top: 20px;
+  }
+  
+  .addproduct form h3 {
+    font-size: 28px;
+    margin-bottom: 25px;
+  }
+  
+  .addproduct form input {
+    padding: 12px 15px;
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+  
+  .addproduct form h4 {
+    font-size: 16px;
+  }
+  
+  .addproduct form button {
+    padding: 12px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .addproduct form {
+    padding: 25px 20px;
+  }
+  
+  .addproduct form h3 {
+    font-size: 24px;
+  }
+  
+  .addproduct form input {
+    padding: 10px 12px;
+    font-size: 13px;
+  }
+  
+  .addproduct form button {
+    padding: 10px;
+    font-size: 14px;
+  }
+  
+  .addproduct form input[type="file"]::-webkit-file-upload-button {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+}
+
+/* Animation for form elements */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.addproduct form input,
+.addproduct form h4,
+.addproduct form button {
+  animation: fadeIn 0.5s ease forwards;
+  opacity: 0;
+}
+
+.addproduct form input:nth-child(2) { animation-delay: 0.05s; }
+.addproduct form input:nth-child(3) { animation-delay: 0.1s; }
+.addproduct form input:nth-child(4) { animation-delay: 0.15s; }
+.addproduct form input:nth-child(5) { animation-delay: 0.2s; }
+.addproduct form input:nth-child(6) { animation-delay: 0.25s; }
+.addproduct form h4 { animation-delay: 0.3s; }
+.addproduct form input[type="checkbox"] { animation-delay: 0.35s; }
+.addproduct form button { animation-delay: 0.4s; }
+
+/* Success/Error Toast Styles (Optional) */
+.toast {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 15px 25px;
+  border-radius: 10px;
+  color: white;
+  font-weight: 600;
+  animation: slideInRight 0.3s ease;
+  z-index: 1000;
+}
+
+.toast.success {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
+.toast.error {
+  background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Loading Spinner (Optional) */
+.spinner {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: white;
+  animation: spin 0.8s linear infinite;
+  margin-right: 10px;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
